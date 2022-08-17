@@ -1,3 +1,4 @@
+import { Appointment } from "./Appointment.js";
 import { Doctor } from "./Doctor.js";
 import { Patient } from "./Patient.js";
 // ==================== DOCTOR ==================== //
@@ -37,9 +38,13 @@ console.log("Medical License: ", doctorOne.medicalLicense);
 console.log("Create Message: ", doctorOne.createMessage());
 console.log("Edit Message: ", doctorOne.editMessage());
 console.log("Delete Message: ", doctorOne.deleteMessage());
+// ==================== APPOINTMENT ==================== //
+let appointmentOne = new Appointment(doctorOne, new Date("2022-02-26 11:20:55"), 12, "Dor de cabeça", "Paracetamol 12h/12h 3 dias", "n/h", "Neurologia", "liberado");
+let appointmentTwo = new Appointment(doctorOne, new Date("2021-01-26 11:10:55"), 10, "Dor de barriga", "Buscopan 6h/6h 2 dias", "Atestado 2 dias", "n/h", "liberado");
+let appointments = [appointmentOne, appointmentTwo];
 // ==================== PATIENT ==================== //
 let patientOne = new Patient("Sheldon Cooper", new Date("1980-02-26 11:20:55"), "036.869.260-40", "Mary Cooper", "George Cooper", "Av Los Robles Avenue, 2311 Pasadena", "Male");
-patientOne.setAppointment(["Appointment 01", "Appointment 02"]);
+patientOne.setAppointment(appointments);
 console.warn("======= PATIENT =======");
 console.log("Name: ", patientOne.name);
 console.log("Birth Day: ", patientOne.birth);
@@ -59,7 +64,6 @@ patientOne.nameMother = "Julia Garcia";
 patientOne.nameFather = "Joao da Silca";
 patientOne.address = "Rua 456, Decimal, Numerais";
 patientOne.genre = "Female";
-patientOne.setAppointment(["Appointment 03", "Appointment 04"]);
 console.warn("======= PATIENT EDITED =======");
 console.log("Name: ", patientOne.name);
 console.log("Birth Day: ", patientOne.birth);

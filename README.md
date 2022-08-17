@@ -72,8 +72,8 @@ The system flow is based on the concept:
 ## 👨🏽‍🏫&nbsp; Instructions for execute the Project <a name="execute-project"></a>
 
 1. Make a project copy to your machine:
-    - git clone https://github.com/seiler-emerson/Entra21_Project_EMR_Front_End_2022.git
-    - Or a direct download from the page [HERE](https://github.com/seiler-emerson/Entra21_Project_EMR_Front_End_2022.git).
+    - git clone https://github.com/seiler-emerson/Entra21_TypeScript_Test_2022.git
+    - Or a direct download from the page [HERE](https://github.com/seiler-emerson/Entra21_TypeScript_Test_2022.git).
     - Import the project into your VSCode and open with live server plugin.
         - If you don't have VSCode installed, watch this video I recorded teaching you how to install it. [VIEW VIDEO](https://youtu.be/82GnguThEAQ).
 

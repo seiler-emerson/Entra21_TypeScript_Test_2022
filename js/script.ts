@@ -1,6 +1,7 @@
 import { Appointment } from "./Appointment.js";
 import { Doctor } from "./Doctor.js";
 import { Patient } from "./Patient.js";
+import { User } from "./User.js";
 
 // ==================== DOCTOR ==================== //
 
@@ -50,6 +51,24 @@ let appointmentOne: Appointment = new Appointment(doctorOne, new Date("2022-02-2
 let appointmentTwo: Appointment = new Appointment(doctorOne, new Date("2021-01-26 11:10:55"), 10, "Dor de barriga", "Buscopan 6h/6h 2 dias", "Atestado 2 dias", "n/h", "liberado")
 let appointments = [appointmentOne, appointmentTwo]
 
+console.warn("======= APPOINTMENT 01 =======");
+console.log("Doctor Name: ",appointmentOne.doctor.name);
+console.log("Date: ",appointmentOne.date);
+console.log("Hour: ",appointmentOne.time);
+console.log("Anamnesis: ",appointmentOne.anamnesis);
+console.log("Prescription: ",appointmentOne.prescription);
+console.log("Forwarding: ",appointmentOne.forwarding);
+console.log("Medical Release: ",appointmentOne.medicalRelease);
+
+console.warn("======= APPOINTMENT 02 =======");
+console.log("Doctor Name: ",appointmentTwo.doctor.name);
+console.log("Date: ",appointmentTwo.date);
+console.log("Hour: ",appointmentTwo.time);
+console.log("Anamnesis: ",appointmentTwo.anamnesis);
+console.log("Prescription: ",appointmentTwo.prescription);
+console.log("Forwarding: ",appointmentTwo.forwarding);
+console.log("Medical Release: ",appointmentTwo.medicalRelease);
+
 // ==================== PATIENT ==================== //
 
 let patientOne: Patient = new Patient("Sheldon Cooper", new Date("1980-02-26 11:20:55"), "036.869.260-40", "Mary Cooper", "George Cooper", "Av Los Robles Avenue, 2311 Pasadena", "Male")
@@ -88,3 +107,13 @@ console.log("Appointment: ", patientOne.getAppointment());
 console.log("Create Message: ", patientOne.createMessage());
 console.log("Edit Message: ", patientOne.editMessage());
 console.log("Delete Message: ", patientOne.deleteMessage());
+
+// ==================== USER ==================== //
+
+let userAdmin: User = new User("admin", 123456, new Date("2022-02-26 11:20:55"), 12)
+console.warn("======= USER =======");
+console.log("User:", userAdmin.user);
+console.log("Password:", userAdmin.password);
+console.log("Create Date:", userAdmin.createDate);
+console.log("Create Time:", userAdmin.createTime);
+
